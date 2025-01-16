@@ -11,13 +11,11 @@ spec:
     - 10h
 ---
 apiVersion: v1
-kind: Pod
+kind: Secret
 metadata:
-  name: pod2
-spec:
-  containers:
-  - name: container2
-    image: public.ecr.aws/docker/library/alpine
-    command: ["sleep"]
-    args:
-    - 10h
+  name: secret
+  annotations:
+    "helm.sh/hook": "post-delete"
+    "helm.sh/hook-delete-policy": "before-hook-creation"
+type: Opaque
+data: {}
