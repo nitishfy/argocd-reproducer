@@ -24,7 +24,7 @@ kind: Secret
 metadata:
   name: secret
   annotations:
-    "helm.sh/hook": "post-delete"
-    "helm.sh/hook-delete-policy": "before-hook-creation"
+    argocd.argoproj.io/hook: PostDelete
 type: Opaque
 data: {}
+  #correct: Y29ycmVjdA==
