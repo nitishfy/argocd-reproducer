@@ -22,7 +22,7 @@ spec:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: hook-secret
+  name: post-delete-secret
   annotations:
     argocd.argoproj.io/hook: PostDelete
 type: Opaque
