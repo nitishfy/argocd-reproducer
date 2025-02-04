@@ -1,23 +1,23 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: alpine-sleep
-  labels:
-    app: alpine-sleep
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: alpine-sleep
-  template:
-    metadata:
-      labels:
-        app: alpine-sleep
-    spec:
-      containers:
-      - name: alpine
-        image: alpine:latest
-        command: ["sleep", "infinity"]
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: alpine-sleep
+#   labels:
+#     app: alpine-sleep
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: alpine-sleep
+#   template:
+#     metadata:
+#       labels:
+#         app: alpine-sleep
+#     spec:
+#       containers:
+#       - name: alpine
+#         image: alpine:latest
+#         command: ["sleep", "infinity"]
 
 ---
 apiVersion: v1
