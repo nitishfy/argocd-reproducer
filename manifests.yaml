@@ -1,4 +1,16 @@
-
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+---
 
 apiVersion: v1
 kind: Pod
@@ -29,7 +41,8 @@ metadata:
     argocd.argoproj.io/hook: PostDelete
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
 type: Opaque
-data: {}
+data: 
+  name: nitish
 
 ---
 apiVersion: batch/v1
