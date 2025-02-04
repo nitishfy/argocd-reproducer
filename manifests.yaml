@@ -39,10 +39,9 @@ metadata:
   name: post-delete-secret
   annotations:
     argocd.argoproj.io/hook: PostDelete
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 type: Opaque
 data: 
-  name: nitish
+  extra: YmFyCg==
 
 ---
 apiVersion: batch/v1
